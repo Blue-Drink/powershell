@@ -1,10 +1,11 @@
 # Tabla de multiplicar
 
 param(
-	$numero
+	$numero,
+	$final
 )
 
-for( $i = 1 ; $i -lt 11 ; $i++ ){
+for( $i = 1 ; $i -lt $final ; $i++ ){
 	$r = $numero * $i
 	write-host $r
 }
