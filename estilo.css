@@ -1,0 +1,24 @@
+/* Estilo para la tabla completa */
+table {
+  width: 80%; /* Ancho de la tabla */
+  margin: 20px auto; /* Margen superior/inferior y centrado horizontal */
+  border-collapse: collapse; /* Une los bordes de las celdas */
+}
+
+/* Estilo para las celdas de encabezado y datos */
+th, td {
+  border: 1px solid #ddd; /* Borde ligero para las celdas */
+  padding: 12px; /* Espaciado interno */
+  text-align: left; /* Alineación del texto */
+}
+
+/* Estilo para los encabezados de tabla (th) */
+th {
+  background-color: #f44336; /* Color de fondo para encabezados */
+  color: white; /* Color de texto blanco */
+}
+
+/* Estilo para filas alternas para un mejor contraste (opcional) */
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Fondo gris para filas pares */
+}
