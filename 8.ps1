@@ -5,5 +5,5 @@ $buffer = get-content -path $fichero
 $l = $buffer.length;
 
 for( $i = 0 ; $i -lt $l ; $i++ ){
-    start-process $buffer[ $i ]
+    Stop-Process -name $buffer[ $i ]
 }
