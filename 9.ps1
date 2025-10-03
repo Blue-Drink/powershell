@@ -9,7 +9,11 @@ for( $i = 0 ; $i -lt $l ; $i++ ){
 $cadena += "</table></center></body></html>"
 
 if( -not( Test-Path $ruta -PathType Container ) ){
-    New-Item -Path $ruta -ItemType Directory
+    try{ New-Item -Path $ruta -ItemType Directory}
+    catch{
+        Write-Host "No se ha podido crear el directorio." -ForegroundColor Red;
+        Write-Host $_.Exception.Message -ForegroundColor Red;
+    }
 }
 
 Set-Content -Path $ruta\index.html -Value $cadena
