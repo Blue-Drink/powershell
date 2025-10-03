@@ -1,11 +1,15 @@
 $p = Get-Process
 $l = $p.length
-$cadena = "<procesos>"
-$ruta = "./procesos.xml"
+$cadena = "<html><body><center><table>"
+$ruta = "C:\xampp\htdocs\power\"
 
 for( $i = 0 ; $i -lt $l ; $i++ ){
-    $cadena += "<proceso><name>" + $p[ $i ].ProcessName + "</name><id>" + $p[ $i ].id + "</id></proceso>";
+    $cadena += "<tr><td>" + $p[ $i ].ProcessName + "</td><td>" + $p[ $i ].id + "</td></tr>";
 }
-$cadena += "</procesos>"
+$cadena += "</table></center></body></html>"
 
-Set-Content -Path $ruta -Value $cadena
+if( -not( Test-Path $ruta -PathType Container ) ){
+    New-Item -Path $ruta -ItemType Directory
+}
+
+Set-Content -Path $ruta\index.html -Value $cadena
