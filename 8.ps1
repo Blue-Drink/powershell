@@ -1,9 +1,9 @@
 # Lectura de ficheros
 
-$fichero = "./README.md";
+$fichero = "./listado.txt";
 $buffer = get-content -path $fichero
 $l = $buffer.length;
 
 for( $i = 0 ; $i -lt $l ; $i++ ){
-    Write-Host $buffer[ $i ]
+    start-process $buffer[ $i ]
 }
