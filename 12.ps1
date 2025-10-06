@@ -1,8 +1,10 @@
 # FUNCIONES
-function mensaje{
+function suma{
     param(
-        [string] $nombre
+        [int] $n1,
+        [int] $n2
     )
-    write-Output "Hola, $nombre"
+    $suma = $n1 + $n2
+    write-Output "La suma es $suma"
 }
-mensaje -nombre "Carlos"
+suma -n1 7 -n2 5
