@@ -8,3 +8,4 @@ function suma{
     return $suma
 }
 $resultado = suma -n1 4 -n2 6
+write-host $resultado
