@@ -5,10 +5,9 @@ function busca{
     
     $contador = 0
     $p = get-process
-    $l = $p.length
 
-    for( $i = 0 ; $i -lt $l ; $i++ ){
-        $n = $p[ $i ].processName
+    foreach( $proceso in $p ){
+        $n = $proceso.processName
         if( $n -eq $nombre ){ $contador++ }
     }
 
