@@ -7,5 +7,7 @@ function suma{
     $suma = $n1 + $n2
     return $suma
 }
-$resultado = suma -n1 4 -n2 6
+$n1 = read-host -prompt "Operando 1"
+$n2 = read-host -prompt "Operando 2"
+$resultado = suma -n1 $n1 -n2 $n2
 write-host $resultado
