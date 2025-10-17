@@ -8,9 +8,7 @@ $max = 0
 
 for ( $i = 0 ; $i -lt $l ; $i++ ){
     $pr_t = $pr[ $i ]
-    if( $pr_t -gt $max ){
-        $max = $pr_t
-    }
+    if( $pr_t -gt $max ){ $max = $pr_t }
 }
 
 write-host "$a tiene prioridad $max"

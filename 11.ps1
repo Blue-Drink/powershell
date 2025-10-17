@@ -4,9 +4,7 @@ $css = get-content -path "./estilo.css"
 $cadena = "<html><head><style>" + $css + "</style></head><body><center><table>"
 $ruta = "C:\xampp\htdocs\power\"
 
-for( $i = 0 ; $i -lt $l ; $i++ ){
-    $cadena += "<tr><td>" + $p[ $i ].ProcessName + "</td><td>" + $p[ $i ].id + "</td></tr>";
-}
+for( $i = 0 ; $i -lt $l ; $i++ ){ $cadena += "<tr><td>" + $p[ $i ].ProcessName + "</td><td>" + $p[ $i ].id + "</td></tr>" }
 $cadena += "</table></center></body></html>"
 
 if( -not( Test-Path $ruta -PathType Container ) ){
@@ -17,4 +15,4 @@ if( -not( Test-Path $ruta -PathType Container ) ){
     }
 }
 
-Set-Content -Path $ruta\index.html -Value $cadena
+Set-Content -Path "$ruta\index.html" -Value $cadena
