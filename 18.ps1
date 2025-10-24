@@ -5,6 +5,5 @@ for( $i = 0 ; $i -lt $l ; $i++ ){
     if( ! $texto[ $i ].StartsWith( "#" )  ){
         $a = $texto[ $i ].trim();
         if( $a -ne "" ){ Write-Host $i".-" $a };
-    }
-    
+    }    
 };
